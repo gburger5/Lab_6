@@ -14,6 +14,25 @@ def encoder(password):
         final = ''.join(map(str, value))
     return final
 
-print(encoder(12345555))
+def main():
+    mainMenu()
+    run = True
+    while run == True:
+        choice = int(input("Please enter an option:" + " "))
+        if choice == 1:
+            global password
+            password = int(input("Please enter a password to encode"))
+            encoder(password)
+            print("Your password has been encoded and stored")
+        elif choice == 2:
+            print(f"The encoded password is {encoder(password)}, and the original password is {password}.")
+        elif choice == 3:
+            run = False
+
+
+if __name__ == "__main__":
+    main()
+
+
 
 
