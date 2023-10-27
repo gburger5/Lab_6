@@ -14,6 +14,18 @@ def encoder(password):
         final = ''.join(map(str, value))
     return final
 
+#Decoder code -  Connor Trzcinski
+def decoder(password):
+    pass_str = str(password)
+    pass_list = list(pass_str)
+    value= []
+    for c in pass_list:
+        value.append(int(c) // 3)
+        final = ''.join(map(str, value))
+    return final
+
+
+
 def main():
     mainMenu()
     run = True
